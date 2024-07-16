@@ -5,19 +5,9 @@ import "../styles/footer.css";
 
 const Footer: React.FC = () => {
 	return (
-		<footer className="footer w-full bg-gray-800 text-white flex justify-between items-center px-4 py-2">
-			<p className="text-sm">
-				Inspired by another{" "}
-				<a
-					href="https://www.tomscott.com/weather/starwars/"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					SW Weather
-				</a>{" "}
-				from long ago.
-			</p>
-			<div className="flex items-center space-x-4">
+		<footer className="footer w-full bg-gray-800 text-gray-400 flex justify-between items-end px-4 py-2">
+
+			<div className="flex items-end space-x-4">
 				<p className="text-sm">
 					Designed and developed by{" "}
 					<a
