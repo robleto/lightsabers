@@ -4,6 +4,7 @@
     min-width: 15vh;
     flex: 1;
     height: 100vh; /* Ensure the panels fit the full height of the viewport */
+    transition: flex 0.8s ease;
   }
 
   .gallery-wrap {
@@ -16,12 +17,10 @@
 
   .item.active {
     flex: 0 0 80%;
-    position: absolute;
-    z-index: 1;
-    left: 0; /* Flush with the left edge of the viewport */
+    transition: flex 0.8s ease;
   }
 
-  .item.active img {
+  .item img {
     height: auto;
     padding: 2vh 4vw;
   }

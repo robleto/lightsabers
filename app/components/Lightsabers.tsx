@@ -68,24 +68,22 @@ const LightsaberGallery: React.FC = () => {
 	};
 
 	return (
-		<div className="w-full h-full flex flex-col">
-			<main className="flex-1 h-full">
-				<div className="gallery-wrap w-full h-full flex flex-row overflow-x-auto">
-					{lightsabersData.map((saber, index) => (
-						<Lightsaber
-							key={index}
-							color={saber.color}
-							imgSrc={saber.imgSrc}
-							altText={saber.altText}
-							title={saber.title}
-							description={saber.description}
-							className={saber.className}
-							isActive={activeIndex === index}
-							onActivate={() => handleActivate(index)}
-						/>
-					))}
-				</div>
-			</main>
+		<div className="w-full h-full flex-1 flex flex-col">
+			<div className="gallery-wrap w-full h-full flex flex-row overflow-x-auto">
+				{lightsabersData.map((saber, index) => (
+					<Lightsaber
+						key={index}
+						color={saber.color}
+						imgSrc={saber.imgSrc}
+						altText={saber.altText}
+						title={saber.title}
+						description={saber.description}
+						className={saber.className}
+						isActive={activeIndex === index}
+						onActivate={() => handleActivate(index)}
+					/>
+				))}
+			</div>
 		</div>
 	);
 };
