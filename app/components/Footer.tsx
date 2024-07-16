@@ -5,11 +5,13 @@ import "../styles/footer.css";
 
 const Footer: React.FC = () => {
 	return (
-		<footer className="footer w-full bg-gray-800 text-gray-400 flex justify-between items-end px-4 py-2">
-
-			<div className="flex items-end space-x-4">
+		<footer className="footer w-full bg-gray-800 text-gray-400 flex justify-between items-center px-4 py-2">
+			<p className="footer-left text-sm">
+				&nbsp;
+			</p>
+			<div className="footer-right flex items-center space-x-4">
 				<p className="text-sm">
-					Designed and developed by{" "}
+					Illustrations and Design by{" "}
 					<a
 						href="https://www.robleto.com/"
 						target="_blank"
@@ -18,7 +20,7 @@ const Footer: React.FC = () => {
 						Greg Robleto
 					</a>
 				</p>
-				<div className="flex space-x-2">
+				<div className="social-icons flex space-x-2">
 					<a
 						href="https://www.robleto.com"
 						target="_blank"
