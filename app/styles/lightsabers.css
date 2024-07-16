@@ -12,24 +12,23 @@
   transition: flex 0.8s ease;
 }
 
-.item:hover, .item:active {
+.item:hover, .item.active, .touch-active {
   flex: 14;
   justify-content: start;
   align-items: center;
 }
 
 .item img {
-  height: auto;
-  max-height: 66vmin;
+  height: 66vh;
   width: auto;
   transition: max-height 0.8s ease, padding 0.8s ease;
   object-fit: contain;
 }
 
-.item:hover img, .item:active img {
-  max-height: 166vmin;
+.item:hover img, .item.active img, .touch-active img {
+  height: 166vh;
   align-self: end;
-  padding: 2vmin 4vmin;
+  padding: 2vh 4vw;
 }
 
 .item .copy {
@@ -39,37 +38,42 @@
   color: #ffffff;
   line-height: 125%;
   font-size: clamp(12px, 2.5vw, 16px);
+  padding-right: 1rem; /* Add right padding */
 }
 
-.item:hover .copy, .item:active .copy {
+.item:hover .copy, .item.active .copy, .touch-active .copy {
   display: inline-block;
-  margin-left: 2vmin;
+  margin: 2vh 2vw;
 }
 
 /* Adjustments for specific types of items */
-.item.long img {
-  max-height: 135vmin;
-  padding: 69vmin 2vmin 0vmin 2vmin;
+.long img {
+  height: 205vh;
+  padding: 69vh 2vh 0vh 2vh;
 }
 
-.item.long:hover, .item.long:active {
+.long:hover, .long.active, .touch-active.long {
   flex: 12;
   align-content: center;
 }
 
-.item.long:hover img, .item.long:active img {
-  max-height: 190vmin;
-  padding: 0vmin 4vmin;
+.long:hover img, .long.active img, .touch-active.long img {
+  height: 270vh;
+  padding: 0vh 4vw;
   align-self: center;
 }
 
-.item.wide:hover, .item.wide:active {
+.wide img {
+  width: auto;
+}
+
+.wide:hover, .wide.active, .touch-active.wide {
   flex: 12;
 }
 
-.item.wide:hover img, .item.wide:active img {
-  max-height: 145vmin;
-  padding: 2vmin 0vmin;
+.wide:hover img, .wide.active img, .touch-active.wide img {
+  height: 145vh;
+  padding: 2vw 0vw;
 }
 
 /* Custom background gradients and text colors */
@@ -111,4 +115,35 @@
 
 .text-green-copy {
   color: #D5F7C8;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 640px) {
+  .item {
+    min-width: 15vh;
+  }
+
+  .item.active, .touch-active {
+    position: absolute;
+    left: 5%;
+    width: 80%;
+  }
+
+  .item img {
+    height: auto;
+  }
+
+  .item.active img, .touch-active img {
+    height: auto;
+    padding: 2vh 4vw;
+  }
+
+  .item .copy {
+    display: none;
+  }
+
+  .item.active .copy, .touch-active .copy {
+    display: block;
+    margin: 2vh 2vw;
+  }
 }
