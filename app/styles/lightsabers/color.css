@@ -1,0 +1,40 @@
+/* Custom background gradients and text colors */
+.bg-blue-gradient { 
+  background: linear-gradient(180deg, #2E6DA7 0%, #287CDE 100%);
+}
+
+.text-blue-copy {
+  color: #A3DCF4;
+}
+
+.bg-purple-gradient { 
+  background: linear-gradient(180deg, #A039F2 0%, #552EA7 100%);
+}
+
+.text-purple-copy {
+  color: #E0B9F2;
+}
+
+.bg-red-gradient { 
+  background: linear-gradient(180deg, #A72929 0%, #6B0E0E 100%);
+}
+
+.text-red-copy {
+  color: #FACFCF;
+}
+
+.bg-yellow-gradient { 
+  background: linear-gradient(180deg, #BC8C13 0%, #A88405 100%);
+}
+
+.text-yellow-copy {
+  color: #FFF8CC;
+}
+
+.bg-green-gradient { 
+  background: linear-gradient(180deg, #08B62E 0%, #0A9420 100%);
+}
+
+.text-green-copy {
+  color: #D5F7C8;
+}

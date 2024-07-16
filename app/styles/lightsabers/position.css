@@ -1,0 +1,47 @@
+/* Position Styles for Lightsabers */
+.item {
+  flex: 2;
+  height: 100%; /* Ensure full height */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+  background-size: cover;
+  background-repeat: none;
+  transition: flex 0.8s ease;
+}
+
+.item:hover, .item.active {
+  flex: 14;
+  justify-content: start;
+  align-items: center;
+}
+
+.item img {
+  height: 66vh;
+  width: auto;
+  transition: max-height 0.8s ease, padding 0.8s ease;
+  object-fit: contain;
+}
+
+.item:hover img, .item.active img {
+  height: 166vh;
+  align-self: end;
+  padding: 2vh 4vw;
+}
+
+.item .copy {
+  display: none;
+  font-family: Lato, sans-serif;
+  font-weight: 300;
+  color: #ffffff;
+  line-height: 125%;
+  font-size: clamp(12px, 2.5vw, 16px);
+  padding-right: 1rem; /* Add right padding */
+}
+
+.item:hover .copy, .item.active .copy {
+  display: inline-block;
+  margin: 2vh 2vw;
+}

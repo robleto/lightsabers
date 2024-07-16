@@ -1,0 +1,29 @@
+/* Adjustments for specific types of items */
+.long img {
+  height: 205vh;
+  padding: 69vh 2vh 0vh 2vh;
+}
+
+.long:hover, .long.active {
+  flex: 12;
+  align-content: center;
+}
+
+.long:hover img, .long.active img {
+  height: 270vh;
+  padding: 0vh 4vw;
+  align-self: center;
+}
+
+.wide img {
+  width: auto;
+}
+
+.wide:hover, .wide.active {
+  flex: 12;
+}
+
+.wide:hover img, .wide.active img {
+  height: 145vh;
+  padding: 2vw 0vw;
+}
