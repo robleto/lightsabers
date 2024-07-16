@@ -1,0 +1,114 @@
+/* Custom Styles for Lightsabers */
+.item {
+  flex: 2;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+  background-size: cover;
+  background-repeat: none;
+  transition: flex 0.8s ease;
+}
+
+.item:hover, .item:active {
+  flex: 14;
+  justify-content: start;
+  align-items: center;
+}
+
+.item img {
+  height: auto;
+  max-height: 66vmin;
+  width: auto;
+  transition: max-height 0.8s ease, padding 0.8s ease;
+  object-fit: contain;
+}
+
+.item:hover img, .item:active img {
+  max-height: 166vmin;
+  align-self: end;
+  padding: 2vmin 4vmin;
+}
+
+.item .copy {
+  display: none;
+  font-family: Lato, sans-serif;
+  font-weight: 300;
+  color: #ffffff;
+  line-height: 125%;
+  font-size: clamp(12px, 2.5vw, 16px);
+}
+
+.item:hover .copy, .item:active .copy {
+  display: inline-block;
+  margin-left: 2vmin;
+}
+
+/* Adjustments for specific types of items */
+.item.long img {
+  max-height: 135vmin;
+  padding: 69vmin 2vmin 0vmin 2vmin;
+}
+
+.item.long:hover, .item.long:active {
+  flex: 12;
+  align-content: center;
+}
+
+.item.long:hover img, .item.long:active img {
+  max-height: 190vmin;
+  padding: 0vmin 4vmin;
+  align-self: center;
+}
+
+.item.wide:hover, .item.wide:active {
+  flex: 12;
+}
+
+.item.wide:hover img, .item.wide:active img {
+  max-height: 145vmin;
+  padding: 2vmin 0vmin;
+}
+
+/* Custom background gradients and text colors */
+.bg-blue-gradient { 
+  background: linear-gradient(180deg, #2E6DA7 0%, #287CDE 100%);
+}
+
+.text-blue-copy {
+  color: #A3DCF4;
+}
+
+.bg-purple-gradient { 
+  background: linear-gradient(180deg, #A039F2 0%, #552EA7 100%);
+}
+
+.text-purple-copy {
+  color: #E0B9F2;
+}
+
+.bg-red-gradient { 
+  background: linear-gradient(180deg, #A72929 0%, #6B0E0E 100%);
+}
+
+.text-red-copy {
+  color: #FACFCF;
+}
+
+.bg-yellow-gradient { 
+  background: linear-gradient(180deg, #BC8C13 0%, #A88405 100%);
+}
+
+.text-yellow-copy {
+  color: #FFF8CC;
+}
+
+.bg-green-gradient { 
+  background: linear-gradient(180deg, #08B62E 0%, #0A9420 100%);
+}
+
+.text-green-copy {
+  color: #D5F7C8;
+}

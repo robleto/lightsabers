@@ -1,0 +1,29 @@
+.footer {
+  background-color: #2d2d2d;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer a {
+  color: #00aaff;
+}
+
+.footer .flex {
+  display: flex;
+}
+
+.footer .space-x-2 > * + * {
+  margin-left: 0.5rem;
+}
+
+.footer .space-x-4 > * + * {
+  margin-left: 1rem;
+}
+
+.footer img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
