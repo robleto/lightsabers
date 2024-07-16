@@ -10,12 +10,14 @@
   background-size: cover;
   background-repeat: none;
   transition: flex 0.8s ease;
+  min-width: 18vw;
 }
 
 .item:hover, .item.active {
   flex: 14;
   justify-content: start;
   align-items: center;
+  min-width: 60vw;
 }
 
 .item img {
