@@ -17,7 +17,7 @@
   flex: 14;
   justify-content: start;
   align-items: center;
-  min-width: 60vw;
+  min-width: 50vw;
 }
 
 .item img {
@@ -27,10 +27,15 @@
   object-fit: contain;
 }
 
+
+.item:hover {
+  transition-delay: 1s; /* Add a delay before expanding */
+}
+
 .item:hover img, .item.active img {
   height: 166vh;
   align-self: end;
-  padding: 2vh 4vw;
+  padding: 2vh 4vw 10vh;
 }
 
 .item .copy {
