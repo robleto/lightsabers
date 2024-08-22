@@ -17,10 +17,14 @@ This site was created with: **React**, **Next.js**, **Tailwind**, **Typescript**
 
 Tools used to build this site:  **Figma**, **Illustrator**, **VS Code**, **Github**, **Netlify**, and **ChatGPT**  
 
+. . .
+
 
 ## Authors
 
 - [@robleto](https://www.github.com/robleto)
+
+. . .
 
 
 ## Roadmap
@@ -28,15 +32,9 @@ Tools used to build this site:  **Figma**, **Illustrator**, **VS Code**, **Githu
 - Fix issues with mobile display for not traditional shapes
 - Design and add additional lightsabers
 
+. . .
+
 
 ## Requests?
 
 What lightsaber would you like to see added next?  Let me know.
-
-
-
-
-## License
-
-[MIT](https://choosealicense.com/licenses/mit/)
-
