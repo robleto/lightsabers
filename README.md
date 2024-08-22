@@ -17,7 +17,9 @@ This site was created with: **React**, **Next.js**, **Tailwind**, **Typescript**
 
 Tools used to build this site:  **Figma**, **Illustrator**, **VS Code**, **Github**, **Netlify**, and **ChatGPT**  
 
+
 . . .
+
 
 
 ## Authors
