@@ -24,7 +24,7 @@ Tools used to build this site:  **Figma**, **Illustrator**, **VS Code**, **Githu
 
 ## Authors
 
-- [@robleto](https://www.github.com/robleto)
+Greg Robleto - [@robleto](https://www.github.com/robleto)
 
 . . .
 
