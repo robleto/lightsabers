@@ -1,7 +1,7 @@
 /* Position Styles for Lightsabers */
 .item {
   flex: 2;
-  height: 100%; /* Ensure full height */
+  height: 100%;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -11,6 +11,7 @@
   background-repeat: none;
   transition: flex 0.8s ease;
   min-width: 18vw;
+  cursor: pointer;
 }
 
 .item:hover, .item.active {
@@ -23,13 +24,13 @@
 .item img {
   height: 66vh;
   width: auto;
-  transition: max-height 0.8s ease, padding 0.8s ease;
+  transition: max-height 0.8s ease, padding 0.8s ease, filter 0.6s ease;
   object-fit: contain;
+  filter: drop-shadow(0 0 0px transparent);
 }
 
-
 .item:hover {
-  transition-delay: 1s; /* Add a delay before expanding */
+  transition-delay: 1s;
 }
 
 .item:hover img, .item.active img {
@@ -38,17 +39,48 @@
   padding: 2vh 4vw 10vh;
 }
 
+/* Blade glow on hover/active */
+.bg-blue-gradient.item:hover img,
+.bg-blue-gradient.item.active img {
+  filter: drop-shadow(0 0 18px rgba(65, 155, 255, 0.6)) drop-shadow(0 0 40px rgba(65, 155, 255, 0.25));
+}
+
+.bg-red-gradient.item:hover img,
+.bg-red-gradient.item.active img {
+  filter: drop-shadow(0 0 18px rgba(255, 52, 52, 0.6)) drop-shadow(0 0 40px rgba(255, 52, 52, 0.25));
+}
+
+.bg-purple-gradient.item:hover img,
+.bg-purple-gradient.item.active img {
+  filter: drop-shadow(0 0 18px rgba(180, 80, 255, 0.6)) drop-shadow(0 0 40px rgba(180, 80, 255, 0.25));
+}
+
+.bg-yellow-gradient.item:hover img,
+.bg-yellow-gradient.item.active img {
+  filter: drop-shadow(0 0 18px rgba(255, 210, 50, 0.6)) drop-shadow(0 0 40px rgba(255, 210, 50, 0.25));
+}
+
+.bg-green-gradient.item:hover img,
+.bg-green-gradient.item.active img {
+  filter: drop-shadow(0 0 18px rgba(50, 220, 80, 0.6)) drop-shadow(0 0 40px rgba(50, 220, 80, 0.25));
+}
+
+/* Copy text - fade in instead of display toggle */
 .item .copy {
-  display: none;
   font-family: Lato, sans-serif;
   font-weight: 300;
   color: #ffffff;
   line-height: 125%;
   font-size: clamp(12px, 2.5vw, 16px);
-  padding-right: 1rem; /* Add right padding */
+  padding-right: 1rem;
+  opacity: 0;
+  max-width: 0;
+  overflow: hidden;
+  transition: opacity 0.5s ease 0.3s, max-width 0.5s ease;
 }
 
 .item:hover .copy, .item.active .copy {
-  display: inline-block;
+  opacity: 1;
+  max-width: 400px;
   margin: 2vh 2vw;
 }

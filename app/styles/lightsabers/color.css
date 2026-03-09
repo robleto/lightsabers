@@ -1,38 +1,38 @@
 /* Custom background gradients and text colors */
-.bg-blue-gradient { 
-  background: linear-gradient(180deg, #2E6DA7 0%, #287CDE 100%);
+.bg-blue-gradient {
+  background: linear-gradient(180deg, #1a4a7a 0%, #0d2845 40%, #0a1c30 100%);
 }
 
 .text-blue-copy {
   color: #A3DCF4;
 }
 
-.bg-purple-gradient { 
-  background: linear-gradient(180deg, #A039F2 0%, #552EA7 100%);
+.bg-purple-gradient {
+  background: linear-gradient(180deg, #6a24a8 0%, #3a1a6b 40%, #1e0e38 100%);
 }
 
 .text-purple-copy {
   color: #E0B9F2;
 }
 
-.bg-red-gradient { 
-  background: linear-gradient(180deg, #A72929 0%, #6B0E0E 100%);
+.bg-red-gradient {
+  background: linear-gradient(180deg, #8a1c1c 0%, #4a0e0e 40%, #1a0505 100%);
 }
 
 .text-red-copy {
   color: #FACFCF;
 }
 
-.bg-yellow-gradient { 
-  background: linear-gradient(180deg, #BC8C13 0%, #A88405 100%);
+.bg-yellow-gradient {
+  background: linear-gradient(180deg, #9a7210 0%, #5a4208 40%, #2a1f04 100%);
 }
 
 .text-yellow-copy {
   color: #FFF8CC;
 }
 
-.bg-green-gradient { 
-  background: linear-gradient(180deg, #08B62E 0%, #0A9420 100%);
+.bg-green-gradient {
+  background: linear-gradient(180deg, #069a26 0%, #064d14 40%, #031a08 100%);
 }
 
 .text-green-copy {

@@ -4,7 +4,9 @@
 		"imgSrc": "/images/darth-vader.svg",
 		"altText": "Darth Vader",
 		"title": "Darth Vader",
-		"description": "Vader's lightsaber shares similarities with his previous hilt as Anakin Skywalker, but has been customized with a more aggressive design, dual crystals, and adjustable blade length suited to his brutally powerful Form V fighting style.",
+		"subtitle": "Sith Lord — Original Trilogy",
+		"description": "Dual-crystal construction with adjustable blade length — a brutally aggressive redesign of his former Jedi weapon, built for Form V power strikes.",
+		"designNotes": "The hilt retains echoes of Anakin's original but trades elegance for menace — heavier emitter shroud, darker alloy finish, and a grip built for a mechanical hand.",
 		"className": ""
 	},
 	{
@@ -12,7 +14,9 @@
 		"imgSrc": "/images/obi-wan-kenobi.svg",
 		"altText": "Obi-Wan Kenobi",
 		"title": "Obi-Wan Kenobi",
-		"description": "Obi-Wan wielded this lightsaber from Attack of the Clones through his duel with Vader on the Death Star. The new hilt design represents Obi-Wan's progression and increased mastery as a Jedi. It moves away from the simple design, inspired by Qui-Gon, that Obi-Wan used as a Padawan.",
+		"subtitle": "Jedi Master — Clone Wars to A New Hope",
+		"description": "A refined hilt marking Obi-Wan's progression from Padawan to Master. The design moves away from the simpler Qui-Gon-inspired weapon of his youth.",
+		"designNotes": "The emitter and grip reflect the refined symmetry of Obi-Wan's defensive Soresu style — balanced, compact, and built for endurance over aggression.",
 		"className": ""
 	},
 	{
@@ -20,7 +24,9 @@
 		"imgSrc": "/images/mace-windu.svg",
 		"altText": "Mace Windu",
 		"title": "Mace Windu",
-		"description": "Mace Windu's lightsaber featured an electrum-plated hilt, signifying his senior status on the Jedi Council. The distinct amethyst/purple blade was produced by a specialized kyber crystal.",
+		"subtitle": "Jedi Council Senior Member",
+		"description": "Electrum-plated hilt signifying senior Council status. The rare amethyst blade was produced by a unique kyber crystal.",
+		"designNotes": "The electrum finish is a status marker — only the most senior Jedi earned this distinction. The hilt geometry is deceptively simple for a weapon of such prestige.",
 		"className": ""
 	},
 	{
@@ -28,7 +34,9 @@
 		"imgSrc": "/images/darth-maul.svg",
 		"altText": "Darth Maul",
 		"title": "Darth Maul",
-		"description": "Darth Maul wielded an iconic double-bladed lightsaber, with two hilts connected together, producing two blades when deployed. This unique design allowed for versatile fighting styles, extended reach, and an intimidating spinning display, but compromised defensive capabilities and mobility compared to single-bladed lightsabers.",
+		"subtitle": "Sith Apprentice — The Phantom Menace",
+		"description": "Iconic double-bladed saber — two connected hilts producing dual blades. Extended reach and intimidating spinning display at the cost of defensive capability.",
+		"designNotes": "The double-blade form factor is essentially two lightsabers fused end-to-end. The elongated proportions make this the most architecturally distinct weapon in the collection.",
 		"className": "long"
 	},
 	{
@@ -36,7 +44,9 @@
 		"imgSrc": "/images/rey2.svg",
 		"altText": "Rey",
 		"title": "Rey",
-		"description": "Rey's unique lightsaber hilt pays homage to her scavenger origins, while the yellow blade represents her role as the first of a new Jedi Order. The rotating activation that flashed green and blue before igniting yellow is an innovative feature not seen on most lightsabers.",
+		"subtitle": "Jedi — The Rise of Skywalker",
+		"description": "A scavenger-forged hilt with a rotating activation switch that flashes green and blue before igniting yellow — marking the first of a new Jedi Order.",
+		"designNotes": "The hilt's salvaged aesthetic is intentional — wrapping and exposed mechanics that honor Rey's resourceful origins while the yellow blade signals something entirely new.",
 		"className": ""
 	},
 	{
@@ -44,7 +54,9 @@
 		"imgSrc": "/images/luke-skywalker.svg",
 		"altText": "Luke Skywalker",
 		"title": "Luke Skywalker",
-		"description": "Luke modeled this new lightsaber hilt after Obi-Wan's as a tribute, using salvaged materials to construct it after losing Anakin's blue saber on Bespin. It has adjustable blade length and defensive capabilities for intense dueling against opponents like Vader and the Emperor.",
+		"subtitle": "Jedi Knight — Return of the Jedi",
+		"description": "Modeled after Obi-Wan's weapon as a tribute, constructed from salvaged materials after losing Anakin's blue saber on Bespin.",
+		"designNotes": "The clean cylindrical profile and minimal ornamentation reflect Luke's self-taught construction approach — functional, honest, and distinctly his own despite the Obi-Wan influence.",
 		"className": ""
 	},
 	{
@@ -52,7 +64,9 @@
 		"imgSrc": "/images/kylo-ren.svg",
 		"altText": "Kylo Ren",
 		"title": "Kylo Ren",
-		"description": "Kylo's unique crossguard design with quillon plasma vents, allowing for added protection and leverage in combat. The unstable, flickering blade was caused by a cracked kyber crystal. The quillon vents acted as lateral plasma channels for the unstable crystal.",
+		"subtitle": "Dark Side — Sequel Trilogy",
+		"description": "Crossguard design with quillon plasma vents. The unstable, flickering blade was caused by a cracked kyber crystal channeled through lateral vents.",
+		"designNotes": "The crossguard isn't decorative — it's a structural necessity. The cracked crystal produces excess energy that must be vented laterally, creating the distinctive medieval silhouette.",
 		"className": "wide"
 	},
 	{
@@ -60,7 +74,9 @@
 		"imgSrc": "/images/yoda.svg",
 		"altText": "Yoda",
 		"title": "Yoda",
-		"description": "Yoda's lightsaber was designed with a compact size to match his small stature, yet remained an elegant and powerful weapon. Its green blade represented Yoda's attunement to the living Force and the light side. The hilt's simple design belied the incredible skill of its master in the ancient lightsaber forms.",
+		"subtitle": "Grand Master — Prequel Trilogy",
+		"description": "Compact hilt scaled to Yoda's small stature, yet an elegant and powerful weapon. The simple design belied incredible mastery of ancient lightsaber forms.",
+		"designNotes": "Proportionally, this is the most compact hilt in the collection. The shorter grip and emitter create a weapon that looks almost ceremonial — until you see it in motion.",
 		"className": ""
 	},
 	{
@@ -68,7 +84,9 @@
 		"imgSrc": "/images/count-dooku.svg",
 		"altText": "Count Dooku",
 		"title": "Count Dooku",
-		"description": "Dooku's curved hilt was designed for the precision and mobility of Form II (Makashi) lightsaber combat, allowing him to slash and lunge with great dexterity. The unique design was controversial among the Jedi Order, as Yoda felt it reflected Dooku's obsession with dueling prowess over Jedi ideals.",
+		"subtitle": "Sith Lord — Prequel Trilogy",
+		"description": "The curved hilt was purpose-built for Form II Makashi precision — allowing elegant slashes and lunges with superior dexterity.",
+		"designNotes": "The curve is the defining feature — an ergonomic choice that optimizes wrist angle for one-handed fencing. Controversial among Jedi, who saw it as prioritizing dueling vanity.",
 		"className": "wide"
 	},
 	{
@@ -76,7 +94,9 @@
 		"imgSrc": "/images/anakin-skywalker.svg",
 		"altText": "Anakin Skywalker",
 		"title": "Anakin Skywalker",
-		"description": "Anakin's Episode II hilt has a smooth emitter shroud design compared to the more angled shroud on the later Episode III version. It also features two small illuminating LED lights not present on the Episode III hilt. The blade dimensions, adjustable length, and ridged grip allow for ideal dueling performance and control.",
+		"subtitle": "Jedi Knight — Episode II",
+		"description": "Smooth emitter shroud with twin LED indicators — a design later replaced by the more angular Episode III version. Ridged grip optimized for aggressive dueling.",
+		"designNotes": "Comparing Episode II and III versions reveals Anakin's evolution — the smoother, more refined geometry here gives way to harder angles as he approaches the dark side.",
 		"className": ""
 	},
 	{
@@ -84,7 +104,9 @@
 		"imgSrc": "/images/qui-gon.svg",
 		"altText": "Qui-Gon Jinn",
 		"title": "Qui-Gon Jinn",
-		"description": "Qui-Gon's iconic lightsaber had a distinct curved grip hilt made of alloy, utilized a green kyber crystal. The green-bladed lightsaber was constructed by Qui-Gon to resemble the weapon of his former master, Count Dooku.",
+		"subtitle": "Jedi Master — The Phantom Menace",
+		"description": "Alloy-constructed hilt with a subtle curved grip. The green-bladed weapon was built to echo the design language of his former master, Count Dooku.",
+		"designNotes": "The lineage is visible — Dooku's curve influence is present but restrained. Qui-Gon's version is straighter, more practical, reflecting a master who valued the Living Force over form.",
 		"className": ""
 	},
 	{
@@ -92,7 +114,9 @@
 		"imgSrc": "/images/darth-siduous.svg",
 		"altText": "Darth Sidious",
 		"title": "Darth Sidious",
-		"description": "Sidious' curved hilt allowed for precise strikes and mobility fitting his mastery of Form VII lightsaber combat. The adjustable red blade length and defusing finish made it suitable for intense dueling bouts against skilled opponents like Yoda and Mace Windu. Overall, Sidious' lightsaber reflected his prowess as a Sith Lord through its menacing yet elegant design.",
+		"subtitle": "Sith Master — Prequel Trilogy",
+		"description": "Curved hilt with adjustable blade length and a refined finish — built for Form VII combat against skilled opponents like Yoda and Mace Windu.",
+		"designNotes": "The most overtly elegant Sith weapon — the refined proportions and precious-metal finish disguise it as an aristocratic accessory, much like Palpatine himself.",
 		"className": ""
 	}
 ]
