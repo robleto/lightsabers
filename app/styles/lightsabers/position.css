@@ -41,32 +41,27 @@
 
 /* Blade glow on hover/active */
 .bg-blue-gradient.item:hover .saber-art,
-.bg-blue-gradient.item.active .saber-art,
-.bg-blue-gradient.item.probe .saber-art {
+.bg-blue-gradient.item.active .saber-art {
   filter: drop-shadow(0 0 18px rgba(65, 155, 255, 0.6)) drop-shadow(0 0 40px rgba(65, 155, 255, 0.25));
 }
 
 .bg-red-gradient.item:hover .saber-art,
-.bg-red-gradient.item.active .saber-art,
-.bg-red-gradient.item.probe .saber-art {
+.bg-red-gradient.item.active .saber-art {
   filter: drop-shadow(0 0 18px rgba(255, 52, 52, 0.6)) drop-shadow(0 0 40px rgba(255, 52, 52, 0.25));
 }
 
 .bg-purple-gradient.item:hover .saber-art,
-.bg-purple-gradient.item.active .saber-art,
-.bg-purple-gradient.item.probe .saber-art {
+.bg-purple-gradient.item.active .saber-art {
   filter: drop-shadow(0 0 18px rgba(180, 80, 255, 0.6)) drop-shadow(0 0 40px rgba(180, 80, 255, 0.25));
 }
 
 .bg-yellow-gradient.item:hover .saber-art,
-.bg-yellow-gradient.item.active .saber-art,
-.bg-yellow-gradient.item.probe .saber-art {
+.bg-yellow-gradient.item.active .saber-art {
   filter: drop-shadow(0 0 18px rgba(255, 210, 50, 0.6)) drop-shadow(0 0 40px rgba(255, 210, 50, 0.25));
 }
 
 .bg-green-gradient.item:hover .saber-art,
-.bg-green-gradient.item.active .saber-art,
-.bg-green-gradient.item.probe .saber-art {
+.bg-green-gradient.item.active .saber-art {
   filter: drop-shadow(0 0 18px rgba(50, 220, 80, 0.6)) drop-shadow(0 0 40px rgba(50, 220, 80, 0.25));
 }
 

@@ -32,6 +32,20 @@ const SaberArt: React.FC<SaberArtProps> = ({ src, className, style, align = "xMi
 	);
 };
 
+const sameStyle = (a?: React.CSSProperties, b?: React.CSSProperties) =>
+	JSON.stringify(a ?? {}) === JSON.stringify(b ?? {});
+
+// Re-rendering would reset the inlined markup and restart any blade animation
+// in progress, so only re-render when the inputs actually change.
+const MemoSaberArt = React.memo(
+	SaberArt,
+	(prev, next) =>
+		prev.src === next.src &&
+		prev.className === next.className &&
+		prev.align === next.align &&
+		sameStyle(prev.style, next.style)
+);
+
 export const artRatio = (src: string) => {
 	const entry = art[src];
 	return entry ? entry.width / entry.height : 0.07;
@@ -81,4 +95,4 @@ export const GlowFilters: React.FC = () => (
 	</svg>
 );
 
-export default SaberArt;
+export default MemoSaberArt;
