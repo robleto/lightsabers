@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { Inter, Cinzel } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import GoogleAnalytics from "./GoogleAnalytics";
 
-const inter = Inter({ subsets: ["latin"] });
-const cinzel = Cinzel({ subsets: ["latin"], variable: "--font-cinzel", weight: ["400", "700"] });
+const inter = localFont({ src: "./fonts/Inter.ttf", weight: "100 900" });
+const cinzel = localFont({ src: "./fonts/Cinzel.ttf", variable: "--font-cinzel", weight: "400 900" });
 // Applies the saved lights-on/off choice before first paint to avoid a flash.
 const modeScript = `try{if(localStorage.getItem("saber-mode")==="dark")document.documentElement.dataset.mode="dark"}catch(e){}`;
 

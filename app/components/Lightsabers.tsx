@@ -2,10 +2,10 @@
 
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import "../styles/lightsabers/position.css";
-import "../styles/lightsabers/mobile.css";
 import "../styles/lightsabers/color.css";
 import "../styles/lightsabers/outliers.css";
 import "../styles/lights.css";
+import "../styles/lightsabers/mobile.css";
 import lightsabersData from "../data/lightsabers.json";
 import SaberArt, { GlowFilters, artRatio } from "./SaberArt";
 
@@ -55,6 +55,17 @@ const Lightsaber: React.FC<LightsaberProps> = ({
 			} ${className}`}
 			style={{ "--i": index } as React.CSSProperties}
 			onClick={onActivate}
+			onTransitionEnd={(event) => {
+				if (event.target !== event.currentTarget || !event.propertyName.startsWith("flex")) return;
+				const item = event.currentTarget;
+				if (!item.classList.contains("active") && !item.matches(":hover")) return;
+				const gallery = item.parentElement;
+				if (!gallery) return;
+				gallery.scrollTo({
+					left: item.offsetLeft + item.offsetWidth / 2 - gallery.clientWidth / 2,
+					behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
+				});
+			}}
 		>
 			<span className="night" aria-hidden="true" />
 			<SaberArt
