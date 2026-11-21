@@ -49,11 +49,12 @@ const Header: React.FC = () => {
 				className="lights-toggle"
 				onClick={toggle}
 				aria-pressed={mode === "dark"}
+				aria-label={mode === "dark" ? "Return to the light side" : "Turn to the dark side"}
+				title={mode === "dark" ? "Light side" : "Dark side"}
 			>
-				<span className="lights-toggle-track" aria-hidden="true">
-					<span className="lights-toggle-thumb" />
-				</span>
-				<span className="lights-toggle-label">{mode === "dark" ? "Lights on" : "Lights off"}</span>
+				<span className="lights-toggle-emblem emblem-jedi" aria-hidden="true" />
+				<span className="lights-toggle-emblem emblem-sith" aria-hidden="true" />
+				<span className="lights-toggle-knob" aria-hidden="true" />
 			</button>
 		</header>
 	);

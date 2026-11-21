@@ -83,64 +83,82 @@
 }
 
 /* ------------------------------------------------------------------
-   Header toggle
+   Header toggle: a day/night style switch, Jedi for light, Sith for dark
    ------------------------------------------------------------------ */
 .lights-toggle {
-	display: inline-flex;
-	align-items: center;
-	gap: 10px;
-	font-size: 11px;
-	letter-spacing: 0.16em;
-	text-transform: uppercase;
-	color: rgba(255, 255, 255, 0.8);
-	background: none;
-	border: 1px solid rgba(255, 255, 255, 0.2);
+	position: relative;
+	flex: none;
+	width: 64px;
+	height: 30px;
+	padding: 0;
+	border: 0;
 	border-radius: 999px;
-	padding: 6px 14px 6px 7px;
+	background: linear-gradient(180deg, #d9d5cf 0%, #f1eee9 100%);
+	box-shadow:
+		inset 0 2px 4px rgba(0, 0, 0, 0.28),
+		0 0 0 1px rgba(255, 255, 255, 0.12);
 	cursor: pointer;
-	white-space: nowrap;
-	transition: border-color 0.2s ease, color 0.2s ease;
+	transition: background 0.5s ease, box-shadow 0.5s ease;
 }
-.lights-toggle:hover {
-	color: #fff;
-	border-color: rgba(255, 255, 255, 0.45);
+[data-mode="dark"] .lights-toggle {
+	background: linear-gradient(180deg, #121014 0%, #24212a 100%);
+	box-shadow:
+		inset 0 2px 4px rgba(0, 0, 0, 0.6),
+		0 0 0 1px rgba(255, 255, 255, 0.1);
 }
 .lights-toggle:focus-visible {
 	outline: 2px solid #fff;
-	outline-offset: 2px;
+	outline-offset: 3px;
 }
-.lights-toggle-track {
-	position: relative;
-	width: 30px;
-	height: 16px;
-	border-radius: 999px;
-	background: rgba(255, 255, 255, 0.18);
-}
-.lights-toggle-thumb {
+.lights-toggle-knob {
 	position: absolute;
-	top: 2px;
-	left: 2px;
-	width: 12px;
-	height: 12px;
+	top: 3px;
+	left: 3px;
+	width: 24px;
+	height: 24px;
 	border-radius: 50%;
-	background: rgba(255, 255, 255, 0.7);
-	transition: transform 0.4s cubic-bezier(0.6, 0, 0.2, 1), background-color 0.4s ease, box-shadow 0.4s ease;
+	background: linear-gradient(180deg, #fbfaf8 0%, #dcd8d2 100%);
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+	transform: translateX(34px);
+	transition: transform 0.45s cubic-bezier(0.6, 0, 0.2, 1.2);
 }
-[data-mode="dark"] .lights-toggle-thumb {
-	transform: translateX(14px);
-	background: #fff;
-	box-shadow: 0 0 8px 2px rgba(120, 190, 255, 0.85);
+[data-mode="dark"] .lights-toggle-knob {
+	transform: translateX(0);
 }
-@media (max-width: 480px) {
-	.lights-toggle {
-		padding: 6px;
-	}
-	.lights-toggle-label {
-		position: absolute;
-		width: 1px;
-		height: 1px;
-		overflow: hidden;
-		clip: rect(0 0 0 0);
+.lights-toggle-emblem {
+	position: absolute;
+	top: 6px;
+	width: 18px;
+	height: 18px;
+	-webkit-mask: var(--emblem) center / contain no-repeat;
+	mask: var(--emblem) center / contain no-repeat;
+	transition: opacity 0.35s ease, transform 0.45s cubic-bezier(0.6, 0, 0.2, 1.2);
+}
+.emblem-jedi {
+	--emblem: url("/images/_icons/jedi.svg");
+	left: 9px;
+	background: #2f7fc4;
+}
+.emblem-sith {
+	--emblem: url("/images/_icons/sith.svg");
+	right: 9px;
+	background: #ff3b3b;
+	filter: drop-shadow(0 0 3px rgba(255, 50, 40, 0.9));
+	opacity: 0;
+	transform: scale(0.6);
+}
+[data-mode="dark"] .emblem-jedi {
+	opacity: 0;
+	transform: scale(0.6);
+}
+[data-mode="dark"] .emblem-sith {
+	opacity: 1;
+	transform: scale(1);
+}
+@media (prefers-reduced-motion: reduce) {
+	.lights-toggle-knob,
+	.lights-toggle-emblem {
+		transition: none;
 	}
 }
 
