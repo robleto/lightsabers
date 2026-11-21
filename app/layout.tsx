@@ -1,10 +1,19 @@
 import type { Metadata } from "next";
-import { Inter, Cinzel } from "next/font/google";
+import { Inter, Cinzel, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 import GoogleAnalytics from "./GoogleAnalytics";
 
 const inter = Inter({ subsets: ["latin"] });
 const cinzel = Cinzel({ subsets: ["latin"], variable: "--font-cinzel", weight: ["400", "700"] });
+const display = Instrument_Serif({
+  subsets: ["latin"],
+  variable: "--font-display",
+  weight: "400",
+  style: ["normal", "italic"],
+});
+
+// Applies the saved lights-on/off choice before first paint to avoid a flash.
+const modeScript = `try{if(localStorage.getItem("saber-mode")==="dark")document.documentElement.dataset.mode="dark"}catch(e){}`;
 
 export const metadata: Metadata = {
   title: "Lightsaber Designs",
@@ -17,8 +26,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${inter.className} ${cinzel.variable}`}>
+    <html lang="en" data-mode="light" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: modeScript }} />
+      </head>
+      <body className={`${inter.className} ${cinzel.variable} ${display.variable}`}>
         <GoogleAnalytics />
         {children}
       </body>

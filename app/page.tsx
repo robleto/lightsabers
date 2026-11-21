@@ -5,7 +5,7 @@ import LightsaberGallery from "./components/Lightsabers";
 
 const Page: React.FC = () => {
 	return (
-		<div className="w-full h-full flex flex-col overflow-auto">
+		<div className="w-full h-full flex flex-col overflow-y-auto overflow-x-hidden">
 			<Header />
 			<div className="flex-1 flex min-h-screen flex-col">
 				<LightsaberGallery />
