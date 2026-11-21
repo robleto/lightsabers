@@ -1,5 +1,5 @@
 /* Adjustments for specific types of items */
-.long img {
+.long .saber-art {
   height: 205vh;
   padding: 69vh 2vh 0vh 2vh;
 }
@@ -9,13 +9,13 @@
   align-content: center;
 }
 
-.long:hover img, .long.active img {
+.long:hover .saber-art, .long.active .saber-art {
   height: 270vh;
   padding: 0vh 4vw;
   align-self: center;
 }
 
-.wide img {
+.wide .saber-art {
   width: auto;
 }
 
@@ -23,7 +23,7 @@
   flex: 12;
 }
 
-.wide:hover img, .wide.active img {
+.wide:hover .saber-art, .wide.active .saber-art {
   height: 145vh;
   padding: 2vw 0vw;
 }

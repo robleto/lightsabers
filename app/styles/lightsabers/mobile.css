@@ -20,7 +20,7 @@
     transition: flex 0.8s ease;
   }
 
-  .item img {
+  .item .saber-art {
     height: 80vh;
     padding: 2vh 4vw;
   }

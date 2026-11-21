@@ -1,0 +1,236 @@
+/* ------------------------------------------------------------------
+   Lights off: the page goes dark and every blade glows
+   ------------------------------------------------------------------ */
+.bg-red-gradient    { --spill: rgba(255, 43, 43, 0.34); }
+.bg-blue-gradient   { --spill: rgba(47, 155, 255, 0.32); }
+.bg-purple-gradient { --spill: rgba(178, 75, 255, 0.34); }
+.bg-yellow-gradient { --spill: rgba(255, 210, 31, 0.28); }
+.bg-green-gradient  { --spill: rgba(67, 242, 90, 0.26); }
+
+.item {
+	position: relative;
+}
+.item > .saber-art,
+.item > .copy {
+	position: relative;
+	z-index: 1;
+}
+.item > .night {
+	position: absolute;
+	inset: 0;
+	background:
+		radial-gradient(60% 45% at 50% 38%, var(--spill), transparent 75%),
+		linear-gradient(180deg, #0c0a0d 0%, #050406 100%);
+	opacity: 0;
+	transition: opacity 0.9s ease;
+	pointer-events: none;
+}
+[data-mode="dark"] .item > .night {
+	opacity: 1;
+}
+[data-mode="dark"] body,
+[data-mode="dark"] .footer {
+	background: #050406;
+}
+[data-mode="dark"] .header {
+	background-color: #0c0a0d;
+	transition: background-color 0.9s ease;
+}
+
+.saber-art {
+	overflow: visible;
+}
+.blade {
+	transform-box: fill-box;
+	transition: fill 0.6s ease;
+}
+.blade-up    { transform-origin: 50% 100%; }
+.blade-down  { transform-origin: 50% 0%; }
+.blade-left  { transform-origin: 100% 50%; }
+.blade-right { transform-origin: 0% 50%; }
+
+[data-mode="dark"] .blade[data-glow^="red"]    { fill: #ffe8e4; }
+[data-mode="dark"] .blade[data-glow^="blue"]   { fill: #e6f4ff; }
+[data-mode="dark"] .blade[data-glow^="green"]  { fill: #eaffe6; }
+[data-mode="dark"] .blade[data-glow^="purple"] { fill: #f6e8ff; }
+[data-mode="dark"] .blade[data-glow^="yellow"] { fill: #fffbe0; }
+[data-mode="dark"] .blade[data-glow="red"]     { filter: url(#glow-red); }
+[data-mode="dark"] .blade[data-glow="red-h"]   { filter: url(#glow-red-h); }
+[data-mode="dark"] .blade[data-glow="blue"]    { filter: url(#glow-blue); }
+[data-mode="dark"] .blade[data-glow="green"]   { filter: url(#glow-green); }
+[data-mode="dark"] .blade[data-glow="purple"]  { filter: url(#glow-purple); }
+[data-mode="dark"] .blade[data-glow="yellow"]  { filter: url(#glow-yellow); }
+
+/* Ignition: each blade extends from its emitter, staggered along the row. */
+.igniting .blade-up,
+.igniting .blade-down {
+	animation: ignite-y 0.6s cubic-bezier(0.2, 0.9, 0.25, 1) both;
+	animation-delay: calc(var(--i, 0) * 90ms + var(--ignite-base, 250ms));
+}
+.igniting .blade-left,
+.igniting .blade-right {
+	animation: ignite-x 0.35s cubic-bezier(0.2, 0.9, 0.25, 1) both;
+	animation-delay: calc(var(--i, 0) * 90ms + var(--ignite-base, 250ms) + 400ms);
+}
+@keyframes ignite-y {
+	0%   { transform: scaleY(0); }
+	75%  { transform: scaleY(1.015); }
+	100% { transform: scaleY(1); }
+}
+@keyframes ignite-x {
+	0%   { transform: scaleX(0); }
+	100% { transform: scaleX(1); }
+}
+
+/* ------------------------------------------------------------------
+   Header toggle: a day/night style switch, Jedi for light, Sith for dark
+   ------------------------------------------------------------------ */
+.lights-toggle {
+	position: relative;
+	flex: none;
+	width: 64px;
+	height: 30px;
+	padding: 0;
+	border: 0;
+	border-radius: 999px;
+	background: linear-gradient(180deg, #d9d5cf 0%, #f1eee9 100%);
+	box-shadow:
+		inset 0 2px 4px rgba(0, 0, 0, 0.28),
+		0 0 0 1px rgba(255, 255, 255, 0.12);
+	cursor: pointer;
+	transition: background 0.5s ease, box-shadow 0.5s ease;
+}
+[data-mode="dark"] .lights-toggle {
+	background: linear-gradient(180deg, #121014 0%, #24212a 100%);
+	box-shadow:
+		inset 0 2px 4px rgba(0, 0, 0, 0.6),
+		0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+.lights-toggle:focus-visible {
+	outline: 2px solid #fff;
+	outline-offset: 3px;
+}
+.lights-toggle-knob {
+	position: absolute;
+	top: 3px;
+	left: 3px;
+	width: 24px;
+	height: 24px;
+	border-radius: 50%;
+	background: linear-gradient(180deg, #fbfaf8 0%, #dcd8d2 100%);
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+	transform: translateX(34px);
+	transition: transform 0.45s cubic-bezier(0.6, 0, 0.2, 1.2);
+}
+[data-mode="dark"] .lights-toggle-knob {
+	transform: translateX(0);
+}
+.lights-toggle-emblem {
+	position: absolute;
+	top: 6px;
+	width: 18px;
+	height: 18px;
+	-webkit-mask: var(--emblem) center / contain no-repeat;
+	mask: var(--emblem) center / contain no-repeat;
+	transition: opacity 0.35s ease, transform 0.45s cubic-bezier(0.6, 0, 0.2, 1.2);
+}
+.emblem-jedi {
+	--emblem: url("/images/_icons/jedi.svg");
+	left: 9px;
+	background: #2f7fc4;
+}
+.emblem-sith {
+	--emblem: url("/images/_icons/sith.svg");
+	right: 9px;
+	background: #ff3b3b;
+	filter: drop-shadow(0 0 3px rgba(255, 50, 40, 0.9));
+	opacity: 0;
+	transform: scale(0.6);
+}
+[data-mode="dark"] .emblem-jedi {
+	opacity: 0;
+	transform: scale(0.6);
+}
+[data-mode="dark"] .emblem-sith {
+	opacity: 1;
+	transform: scale(1);
+}
+@media (prefers-reduced-motion: reduce) {
+	.lights-toggle-knob,
+	.lights-toggle-emblem {
+		transition: none;
+	}
+}
+
+/* ------------------------------------------------------------------
+   Intro: headline, then the sabers fly in, then each test-opens
+   ------------------------------------------------------------------ */
+.intro-overlay {
+	position: absolute;
+	inset: 0;
+	display: flex;
+	align-items: center;
+	/* the gallery is a full screen tall but sits under the header, so lift the headline */
+	padding: 0 clamp(20px, 6vw, 96px) 3rem;
+	background: #0c0a0d;
+	z-index: 0;
+	pointer-events: none;
+}
+.intro-headline {
+	margin: 0;
+	font-family: var(--font-cinzel), serif;
+	font-weight: 400;
+	font-size: clamp(24px, 4.5vw, 80px);
+	line-height: 1.15;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	color: #efe8dc;
+}
+.intro-headline .w {
+	display: inline-block;
+	animation: word-in 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+	animation-delay: calc(var(--w) * 110ms + 150ms);
+}
+@keyframes word-in {
+	from {
+		opacity: 0;
+		transform: translateY(0.35em);
+		filter: blur(8px);
+	}
+}
+
+.gallery-wrap {
+	position: relative;
+	z-index: 1;
+}
+.intro-title .gallery-wrap,
+.intro-fly .gallery-wrap {
+	pointer-events: none;
+}
+
+/* Waiting in the wings, off the right edge. */
+.intro-title .item {
+	transform: translateX(110vw);
+}
+
+/* Fly in from the right, overshoot past the left edge, bounce back. */
+/* Kept applied after the intro so the row settles in place. */
+.intro-flown .item {
+	animation: fly-in 1.1s both;
+	animation-delay: calc(var(--i) * 55ms);
+}
+@keyframes fly-in {
+	0%   { transform: translateX(110vw); animation-timing-function: cubic-bezier(0.25, 0.6, 0.35, 1); }
+	60%  { transform: translateX(-9vw);  animation-timing-function: cubic-bezier(0.4, 0, 0.4, 1); }
+	80%  { transform: translateX(2.5vw); animation-timing-function: cubic-bezier(0.4, 0, 0.4, 1); }
+	92%  { transform: translateX(-0.8vw); }
+	100% { transform: translateX(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.igniting .blade,
+	.intro-headline .w,
+	.intro-flown .item {
+		animation: none !important;
+	}
+}
