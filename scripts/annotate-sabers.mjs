@@ -17,6 +17,16 @@ const BLADE_FILLS = {
 	"#C24CF5": "purple",
 	"#FCDB00": "yellow",
 };
+// Some drawings fill the blade with a radial gradient and carry its color in the stroke.
+const STROKE_COLORS = {
+	"#D75151": "red",
+	"#55B0D2": "blue",
+	"#BC48C6": "purple",
+	"#D6D949": "yellow",
+	"#7AFA87": "green",
+};
+// The darksaber is drawn as a solid near-black blade; it has no glow color.
+BLADE_FILLS["#040405"] = "black";
 const MIN_BLADE_LENGTH = 250; // ignore small accent shapes that share a blade color
 
 // Bounding box of an absolute-command path (the Figma export uses M L H V C Z).
@@ -51,21 +61,36 @@ for (const saber of sabers) {
 	// Namespace ids so several inlined SVGs can share one page.
 	inner = inner
 		.replace(/id="([^"]+)"/g, `id="${prefix}-$1"`)
-		.replace(/url\(#([^)]+)\)/g, `url(#${prefix}-$1)`);
+		.replace(/url\(#([^)]+)\)/g, `url(#${prefix}-$1)`)
+		.replace(/href="#([^"]+)"/g, `href="#${prefix}-$1"`);
 
 	let blades = 0;
-	inner = inner.replace(/<path d="([^"]+)"([^>]*?)fill="(#[0-9A-F]{6})"/gi, (m, d, rest, fill) => {
-		const color = BLADE_FILLS[fill.toUpperCase()];
-		if (!color) return m;
+	// The emitter is the blade end nearest the middle of the drawing.
+	const tagBlade = (d, color) => {
 		const b = pathBox(d);
 		const bw = b.x1 - b.x0, bh = b.y1 - b.y0;
-		if (Math.max(bw, bh) < MIN_BLADE_LENGTH) return m;
-		// The emitter is the blade end nearest the middle of the drawing.
+		if (Math.max(bw, bh) < MIN_BLADE_LENGTH) return null;
 		let dir;
 		if (bh >= bw) dir = (b.y0 + b.y1) / 2 < H / 2 ? "up" : "down";
 		else dir = (b.x0 + b.x1) / 2 < W / 2 ? "left" : "right";
 		blades++;
-		return `<path class="blade blade-${dir}" data-glow="${color}${bh >= bw ? "" : "-h"}" d="${d}"${rest}fill="${fill}"`;
+		return `class="blade blade-${dir}" data-glow="${color}${bh >= bw ? "" : "-h"}"`;
+	};
+
+	// Gradient-filled blades: the color lives in the stroke.
+	inner = inner.replace(/<path d="([^"]+)"([^>]*?)fill="url\(#([^)]+)\)"([^>]*?)stroke="(#[0-9A-F]{6})"/gi, (m, d, rest, grad, rest2, stroke) => {
+		const color = STROKE_COLORS[stroke.toUpperCase()];
+		const attrs = color && tagBlade(d, color);
+		if (!attrs) return m;
+		return `<path ${attrs} d="${d}"${rest}fill="url(#${grad})"${rest2}stroke="${stroke}"`;
+	});
+
+	// Solid-filled blades: the color lives in the fill.
+	inner = inner.replace(/<path d="([^"]+)"([^>]*?)fill="(#[0-9A-F]{6})"/gi, (m, d, rest, fill) => {
+		const color = BLADE_FILLS[fill.toUpperCase()];
+		const attrs = color && tagBlade(d, color);
+		if (!attrs) return m;
+		return `<path ${attrs} d="${d}"${rest}fill="${fill}"`;
 	});
 	if (!blades) throw new Error(`No blade found in ${saber.imgSrc}`);
 	out[saber.imgSrc] = { width: W, height: H, inner };

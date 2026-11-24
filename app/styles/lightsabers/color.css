@@ -38,3 +38,11 @@
 .text-green-copy {
   color: #D5F7C8;
 }
+
+.bg-black-gradient {
+  background: linear-gradient(180deg, #3a3f47 0%, #1a1d22 40%, #08090b 100%);
+}
+
+.text-black-copy {
+  color: #DCE2E8;
+}

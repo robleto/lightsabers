@@ -24,6 +24,7 @@ const SaberArt: React.FC<SaberArtProps> = ({ src, className, style, align = "xMi
 			className={className}
 			style={style}
 			viewBox={`0 0 ${entry.width} ${entry.height}`}
+			fill="none"
 			preserveAspectRatio={align}
 			aria-hidden="true"
 			focusable="false"

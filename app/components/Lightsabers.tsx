@@ -29,6 +29,7 @@ const colorClassMap: { [key: string]: { bg: string; text: string } } = {
 	red: { bg: "bg-red-gradient", text: "text-red-copy" },
 	yellow: { bg: "bg-yellow-gradient", text: "text-yellow-copy" },
 	green: { bg: "bg-green-gradient", text: "text-green-copy" },
+	black: { bg: "bg-black-gradient", text: "text-black-copy" },
 };
 
 const Lightsaber: React.FC<LightsaberProps> = ({

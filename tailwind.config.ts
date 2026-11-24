@@ -15,7 +15,7 @@ const config: Config = {
 			},
 			fontFamily: {
 				oswald: ["Oswald", "sans-serif"],
-				lato: ["Lato", "sans-serif"],
+				lato: ["var(--font-lato)", "sans-serif"],
 				cinzel: ["var(--font-cinzel)", "serif"],
 			},
 		},

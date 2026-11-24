@@ -41,7 +41,7 @@
 	},
 	{
 		"color": "yellow",
-		"imgSrc": "/images/rey2.svg",
+		"imgSrc": "/images/rey.svg",
 		"altText": "Rey",
 		"title": "Rey",
 		"subtitle": "Jedi — The Rise of Skywalker",
@@ -111,12 +111,62 @@
 	},
 	{
 		"color": "red",
-		"imgSrc": "/images/darth-siduous.svg",
+		"imgSrc": "/images/darth-sidious.svg",
 		"altText": "Darth Sidious",
 		"title": "Darth Sidious",
 		"subtitle": "Sith Master — Prequel Trilogy",
 		"description": "Curved hilt with adjustable blade length and a refined finish — built for Form VII combat against skilled opponents like Yoda and Mace Windu.",
 		"designNotes": "The most overtly elegant Sith weapon — the refined proportions and precious-metal finish disguise it as an aristocratic accessory, much like Palpatine himself.",
+		"className": ""
+	},
+	{
+		"color": "black",
+		"imgSrc": "/images/pre-vizsla.svg",
+		"altText": "Pre Vizsla",
+		"title": "Pre Vizsla",
+		"subtitle": "Mandalorian Warlord — The Darksaber",
+		"description": "The Darksaber, a black-bladed weapon forged by Tarre Vizsla, the first Mandalorian Jedi. Pre Vizsla wielded it as leader of Death Watch, the splinter faction that seized control of Mandalore.",
+		"designNotes": "The blade is a flat, unlit slab with an angled tip and faint hairline cracks. Its hilt is heavier and more utilitarian than a Jedi's, a weapon built for a warlord rather than a Temple.",
+		"className": ""
+	},
+	{
+		"color": "red",
+		"imgSrc": "/images/asajj-ventress.svg",
+		"altText": "Asajj Ventress",
+		"title": "Asajj Ventress",
+		"subtitle": "Dark Jedi — The Clone Wars",
+		"description": "Twin curved hilts with red blades that lock together into a single split-bladed staff. Ventress fought with both at once, trading the Jedi's single-saber discipline for a faster, more improvised style.",
+		"designNotes": "The curved, chrome-and-black grips are built for a wide, looping hand. Each hilt carries its own small red indicator, so the pair reads as two matched weapons that can also be joined into one.",
+		"className": "wide"
+	},
+	{
+		"color": "green",
+		"imgSrc": "/images/gungi.svg",
+		"altText": "Gungi",
+		"title": "Gungi",
+		"subtitle": "Jedi Padawan — Brylark Wood Hilt",
+		"description": "A hilt made entirely of brylark, a heat-resistant wood from Kashyyyk, and one of the few all-wood sabers in the franchise. Its green blade ignites from a metal emitter cap at the top of the wood.",
+		"designNotes": "The hilt is deliberately plain — a single tapered grip with a worn, grained finish. It suggests a weapon made by hand rather than issued by the Temple, and the natural wood sets it apart from every other saber in the gallery.",
+		"className": ""
+	},
+	{
+		"color": "red",
+		"imgSrc": "/images/savage-opress.svg",
+		"altText": "Savage Opress",
+		"title": "Savage Opress",
+		"subtitle": "Dark Jedi — The Clone Wars",
+		"description": "A double-bladed saber in the style of his brother Darth Maul's, given to Savage during his training under Count Dooku. Two long red blades make it built for brutal, spinning attacks.",
+		"designNotes": "The emitter guards sit at both ends of the hilt, so the weapon can be swung from either side. Its extreme length makes it the most imposing saber in the collection, and the least practical in close quarters.",
+		"className": "long"
+	},
+	{
+		"color": "green",
+		"imgSrc": "/images/ahsoka-tano.svg",
+		"altText": "Ahsoka Tano",
+		"title": "Ahsoka Tano",
+		"subtitle": "Padawan — The Clone Wars",
+		"description": "A matched pair of green-bladed sabers, the weapons Ahsoka carried through much of The Clone Wars before they were taken from her during the Wrong Jedi arc. Each slim hilt is built for a Padawan's quick, agile footwork.",
+		"designNotes": "The two hilts are plain, tapered grips with narrow emitters. Their restraint suits a Padawan still learning the Jedi forms, and it sets up the contrast with the white blades she would later carry as a Jedi outside the Order.",
 		"className": ""
 	}
 ]

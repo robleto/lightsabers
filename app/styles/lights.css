@@ -6,6 +6,7 @@
 .bg-purple-gradient { --spill: rgba(178, 75, 255, 0.34); }
 .bg-yellow-gradient { --spill: rgba(255, 210, 31, 0.28); }
 .bg-green-gradient  { --spill: rgba(67, 242, 90, 0.26); }
+.bg-black-gradient  { --spill: rgba(220, 226, 232, 0.14); }
 
 .item {
 	position: relative;
